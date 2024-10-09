@@ -153,8 +153,8 @@ const BlogList = () => {
                 <div className="datatable-responsive-demo">
                     <DataTable value={blogList.slice(first, first + rows)} paginator={false} first={first} rows={rows}>
                         <Column field="blogTitle" header="Blog Title" headerStyle={{ backgroundColor: '#007ad9', color: '#fff' }}></Column>
-                        {/* <Column field="website" header="Website" headerStyle={{ backgroundColor: '#007ad9', color: '#fff' }}></Column> */}
-                        {/* <Column field="categoryName" header="Category" headerStyle={{ backgroundColor: '#007ad9', color: '#fff' }}></Column>  */}
+                        <Column field="website" header="Website" body={(rowData) => rowData.website.map(site => site.websiteName).join(', ')} headerStyle={{ backgroundColor: '#007ad9', color: '#fff' }}></Column>
+                        <Column field="categoryName" header="Category" body={(rowData) => rowData.category.categoryName} headerStyle={{ backgroundColor: '#007ad9', color: '#fff' }}></Column> 
                         <Column field="status" header="Status" headerStyle={{ backgroundColor: '#007ad9', color: '#fff' }}></Column>
                         <Column field="createdOn" header="Created Date" headerStyle={{ backgroundColor: '#007ad9', color: '#fff' }}></Column>
                         <Column body={actionBodyTemplate} header="Action" headerStyle={{ backgroundColor: '#007ad9', color: '#fff' }}></Column>

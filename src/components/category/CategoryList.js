@@ -40,7 +40,6 @@ const CategoryList = () => {
         setRows(event.rows);
     };
 
-    
 
     const actionBodyTemplate = (rowdata) => {
         // console.log(rowdata)
@@ -51,8 +50,6 @@ const CategoryList = () => {
             </React.Fragment>
         )
     }
-
-   
 
     const dialogFuncMap = {'addCategoryModal': setAddcategoryModal, 'editCategoryModal' : setEditCategoryModal, 'deleteCategoryModal': setDeleteCategoryModal};
 
